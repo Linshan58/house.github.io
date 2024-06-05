@@ -1,0 +1,89 @@
+
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #f8f9fa;
+color: #343a40;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+h1 {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.house-container {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 20px;
+width: 100%; /* 使用整個可用寬度 */
+margin-bottom: 20px; /* 增加底部間距 */
+}
+
+.house-image {
+max-width: 100%;
+height: auto;
+border-radius: 5px;
+}
+
+.house-details {
+margin-top: 20px; /* 增加頂部間距 */
+}
+
+.house-name {
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 10px; /* 增加底部間距 */
+}
+
+.house-address,
+.house-type,
+.house-layout,
+.house-age,
+.house-area,
+.house-price,
+.house-floor,
+.house-description,
+.agent-name,
+.agent-phone,
+.agent-email {
+margin-bottom: 5px; /* 增加底部間距 */
+}
+
+.agent-details {
+margin-top: 20px; /* 增加頂部間距 */
+}
+
+.pagination {
+list-style: none;
+padding: 0;
+margin-top: 30px;
+text-align: center;
+}
+
+.page-item {
+display: inline-block;
+margin: 5px;
+}
+
+.page-link {
+text-decoration: none;
+color: #007bff;
+font-weight: 600;
+padding: 8px 16px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+width: 50px; /* 固定寬度 */
+}
+
+.page-link:hover {
+background-color: #007bff;
+color: #fff;
+}
+
+.page-item.active .page-link {
+background-color: #007bff;
+color: #fff;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登入</title>
+    <!-- 引入外部CSS文件 -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    {% include 'tophome.html' %}
+    {% include 'Navigation_bar.html' %} <!-- 包含 home.html 模板 -->
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" method="post">
+            {% csrf_token %}
+            <h2>登入</h2>
+            {% if error_message %}
+                <p style="color: red;">{{ error_message }}</p>
+            {% endif %}
+            <input type="text" id="account" name="account" placeholder="帳號" required><br><br>
+            <input type="password" id="password" name="password" placeholder="密碼" required><br><br>
+            <button type="submit">登入</button>
+            <a id="register-btn" href="{% url 'register' %}">還沒帳號嗎?</a>
+        </form>
+    </div>
+</body>
+</html>
