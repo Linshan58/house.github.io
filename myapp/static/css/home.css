@@ -1,0 +1,36 @@
+body {
+    background-color: #d2cfcf; /* 设置整个网站的背景颜色为浅灰色 */
+    margin: 0; /* 移除默认的外边距 */
+    font-family: Arial, sans-serif; /* 设置全局字体 */
+}
+.hot-cities {
+padding: 20px;
+}
+
+.hot-cities h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.hot-cities-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+gap: 10px;
+}
+
+.city-image-container {
+width: 100%;
+}
+
+.city-image-container img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+}
+.city-name {
+position: absolute;
+text-align: center;
+color: rgb(77, 76, 76); /* 白色文字 */
+font-size: 18px; /* 調整字體大小 */
+position: relative;
+}
