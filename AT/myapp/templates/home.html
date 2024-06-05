@@ -10,6 +10,31 @@
     {% include 'tophome.html' %}
     {% include 'Navigation_bar.html' %} <!-- 包含 home.html 模板 -->
     <style>
+        body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.top-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background-color: #82c9ef;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the button is on the top layer */
+}
+
+.top-button img {
+  max-height: 40px; /* Set the desired size of the image */
+  height: auto;
+}
     .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr) 2fr;
