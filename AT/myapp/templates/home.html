@@ -265,6 +265,98 @@ position: relative;
     </style>
 </head>
 <body>
+     {% load static %}
+    <button class="top-button" onclick="location.href='/'">
+        <img src="{% static 'images/products/1.jpg' %}" alt="Button Image">
+    </button>
+    <nav>
+        <div class="navbar">
+            <!-- 左側按鈕群組 -->
+            <div class="left-buttons">
+                <div class="dropdown" onclick="toggleDropdown()">
+                    <button class="dropdown-toggle"><i class="fas fa-bars"></i></button>
+                    <div class="dropdown-content">
+                        <a class="large" href="#">產品</a>
+                        <a class="large" href="#">空間</a>
+                        <a href="#">布置靈感</a>
+                        <a href="#">新品專區</a>
+                        <a href="#">再創新低價專區</a>
+                        <a href="#">最新活動</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="cc">房屋劉覽</button>
+                    <div class="dropdown-content">
+                        <a href="#">收藏房屋</a>
+                        <a href="#">房屋列表</a>
+                        <a href="#">進階搜尋</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 搜尋欄 -->
+            <div class="search-container">
+                <input type="text" placeholder="尋找...">
+                <button type="submit">搜尋</button>
+            </div>
+            <!-- 右側按鈕群組 -->
+            <div class="right-buttons">
+                <div class="dropdown">
+                    <button class="cc">網站簡介</button>
+                    <div class="dropdown-content">
+                        <a class="large" href="#">產品</a>
+                        <a class="large" href="#">空間</a>
+                        <a href="#">布置靈感</a>
+                        <a href="#">新品專區</a>
+                        <a href="#">再創新低價專區</a>
+                        <a href="#">最新活動</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="cc">房屋評選</button>
+                    <div class="dropdown-content">
+                        <a class="large" href="#">產品</a>
+                        <a class="large" href="#">空間</a>
+                        <a href="#">布置靈感</a>
+                        <a href="#">新品專區</a>
+                        <a href="#">再創新低價專區</a>
+                        <a href="#">最新活動</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="cc">會員</button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'login' %}">登錄</a>
+                        <a href="#">收藏</a>
+                        <a href="#">資料修改</a>
+                    </div>
+                </div>
+                {% if request.session.username %}
+                    <span>{{ request.session.username }}</span>
+                {% endif %}
+
+                <!-- {% if request.session.username %}
+                <div class="dropdown">
+                    <button class="cc">會員</button>
+                    <div class="dropdown-content">
+                        <a href="#">會員資料</a>
+                        <a href="#">登出</a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="dropdown">
+                    <a herf="{% url 'login' %}"><button class="cc" >登錄</button>
+                </div>
+                {% endif %} -->
+            </div>
+        </div>  
+    </nav>
+    
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.classList.toggle('active');
+        }
+    </script>
     <!-- <h1>首页</h1>
     {% if username %}
         <p>歡迎回来，{{ username }}！</p>
