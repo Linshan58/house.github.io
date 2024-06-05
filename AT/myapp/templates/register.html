@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    {% include 'Navigation_bar.html' %} <!-- 包含 home.html 模板 -->
+</head>
+<body>
+    <h2>Register</h2>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="account">Account:</label>
+        <input type="text" id="account" name="account" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="member_type">Member Type:</label>
+        <select id="member_type" name="member_type">
+            <option value="會員">會員</option>
+            <option value="房屋代理人">房屋代理人</option>
+        </select><br><br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
